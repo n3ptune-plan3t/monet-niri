@@ -1,0 +1,65 @@
+#!/bin/bash
+
+IMAGE_PATH="/home/ziky/.config/mpv/mpv-audio.jpg"
+
+# Step 1: Get search query
+QUERY=$(fuzzel --dmenu --prompt="Search YouTube :  ")
+[ -z "$QUERY" ] && exit 1
+
+# Step 2: Get top 30 results, sort by view count, format view count to K/M
+RAW_RESULTS=$(yt-dlp "ytsearch30:$QUERY" --flat-playlist \
+    --print "%(view_count)s ::: %(title)s    󱙝    %(uploader)s ::: %(id)s")
+
+RESULTS=$(echo "$RAW_RESULTS" | sort -t ' ' -k1 -nr | awk -F " ::: " '{
+    vc = $1;
+    if (vc >= 1000000) {
+        vcf = sprintf("%.1fM", vc/1000000);
+    } else if (vc >= 1000) {
+        vcf = sprintf("%.1fK", vc/1000);
+    } else {
+        vcf = vc;
+    }
+    print vcf "   󱙝   " $2 " ::: " $3;
+}')
+
+# Step 3: Create menu of display names
+DISPLAY_LIST=$(echo "$RESULTS" | awk -F " ::: " '{print $1}')
+
+# Step 4: User selects a display entry
+CHOICE=$(printf "%s\n" "$DISPLAY_LIST" | fuzzel --dmenu --prompt="Choose Video:")
+[ -z "$CHOICE" ] && exit 1
+
+# Step 5: Extract corresponding video ID
+VIDEO_ID=$(echo "$RESULTS" | grep -F "$CHOICE" | awk -F " ::: " '{print $2}')
+YTURL="https://www.youtube.com/watch?v=$VIDEO_ID"
+
+# Step 6: Choose playback quality
+QUALITY=$(printf "1080p H264 󱔮\n720p H264 󱁪\n480p H264 󰕧\naudio only 󰝚" | fuzzel --dmenu --prompt="Choose Quality:")
+[ -z "$QUALITY" ] && exit 1
+
+# Step 7: Play with mpv
+case "$QUALITY" in
+  "1080p H264 󱔮")
+    notify-send "ytmpv" "Playing 1080p 󱔮"
+    mpv --ytdl-format="bestvideo[height<=1080][ext=mp4][vcodec*=avc1]+bestaudio[ext=m4a]/best[ext=mp4]" "$YTURL"
+    ;;
+  "720p H264 󱁪")
+    notify-send "ytmpv" "Playing 720p 󱁪"
+    mpv --ytdl-format="bestvideo[height<=720][ext=mp4][vcodec*=avc1]+bestaudio[ext=m4a]/best[ext=mp4]" "$YTURL"
+    ;;
+  "480p H264 󰕧")
+    notify-send "ytmpv" "Playing 480p 󰕧"
+    mpv --ytdl-format="bestvideo[height<=480][ext=mp4][vcodec*=avc1]+bestaudio[ext=m4a]/best[ext=mp4]" "$YTURL"
+    ;;
+  "audio only 󰝚")
+    notify-send "ytmpv" "Playing Audio 󰝚"
+      mpv --force-window --no-video \
+          --external-file="$IMAGE_PATH" \
+          --image-display-duration=inf --vid=1 \
+          --ytdl-format="bestaudio[ext=m4a]/bestaudio" \
+          "$YTURL"
+    ;;
+  *)
+    notify-send "ytmpv" "Invalid option."
+    ;;
+esac

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+SELECTION="$(printf "󰌾 Lock\n󰒲 Suspend\n󰩈 Exit Niri\n󰜉 Reboot\n󰍃 Log-out\n󰐥 Shutdown" | fuzzel --dmenu -l 6 -p "Power Menu: ")"
+
+case $SELECTION in
+	*"Lock")
+		gtklock;;
+	*"Suspend")
+		/home/ziky/Scripts/locksuspend.sh;;
+	*"Exit Niri")
+		niri msg action quit;;
+	*"Reboot")
+		loginctl reboot;;
+	*"Log-out")
+		loginctl terminate-user $USER;;
+	*"Shutdown")
+		loginctl poweroff;;
+esac
