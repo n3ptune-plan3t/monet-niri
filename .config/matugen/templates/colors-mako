@@ -1,0 +1,9 @@
+background-color={{colors.background.default.hex}}
+text-color={{colors.on_background.default.hex}}
+border-color={{colors.primary.default.hex}}
+progress-color=over {{colors.primary_container.default.hex}}
+default-timeout=10000
+layer=overlay
+
+[urgency=high]
+border-color={{colors.error.default.hex}}

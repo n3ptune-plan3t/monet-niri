@@ -1,0 +1,54 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "wipe"]
+set = true
+
+[templates.waybar]
+input_path = './templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.gtk3]
+input_path = './templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+pre_hook = 'gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-Dark"'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3-dark"'
+
+[templates.gtk4]
+input_path = './templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.kvantum]
+input_path = './templates/kvantum-colors.kvconfig'
+output_path = '~/.config/Kvantum/matugen/matugen.kvconfig'
+
+[templates.kvantum_svg]
+input_path = './templates/kvantum-colors.svg'
+output_path = '~/.config/Kvantum/matugen/matugen.svg'
+post_hook = 'kvantummanager --set matugen'
+
+[templates.fuzzel]
+input_path = './templates/colors-fuzzel.ini'
+output_path = '~/.config/fuzzel/colors-fuzzel.ini'
+
+[templates.mako]
+input_path = './templates/colors-mako'
+output_path = '~/.config/mako/config'
+post_hook = 'makoctl reload'
+
+[templates.kitty]
+input_path = './templates/kitty-colors.conf'
+output_path = '~/.config/kitty/kitty.conf'
+
+[templates.zathura]
+input_path = './templates/zathura-colors'
+output_path = '~/.config/zathura/zathurarc'
+
+# [templates.wlogout]
+# input_path = './templates/colors.css'
+# output_path = '~/.config/wlogout/colors.css'
+
+[templates.folder]
+input_path = '~/.config/matugen/templates/colors-papirus.txt'
+output_path = '~/.config/matugen/papirus-folders/colors-papirus.txt'
+post_hook = '~/.config/matugen/papirus-folders/change-icons.sh'
