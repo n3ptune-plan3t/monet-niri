@@ -1,0 +1,106 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 19,
+  "modules-left": ["niri/workspaces", "niri/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "backlight", "network", "battery", "custom/power"],
+  "font": "Iosevka Nerd Font Propo 18",
+  "margin-top": 6,
+  "margin-right": 6,
+  "margin-bottom": 0,
+  "margin-left": 6,
+  "spacing": 5,
+  "style": "/home/ziky/.config/waybar/style.css",
+
+  "niri/workspaces": {
+         "format": "{icon}",
+         "format-icons": {
+             // "default": "󰺕 ",
+             // "active": "󰪥 ",
+             // "urgent": ""
+                // "default": "",
+                // "active": "󰄭",
+                // "1": "<span size='large'>一</span>",
+                // "2": "<span size='large'>二</span>",
+                // "3": "<span size='large'>三</span>",
+                // "4": "<span size='large'>四</span>",
+                // "5": "<span size='large'>五</span>",
+                // "6": "<span size='large'>六</span>",
+                // "7": "<span size='large'>七</span>",
+                // "8": "<span size='large'>八</span>",
+                // "9": "<span size='large'>九</span>",
+                // "10": "<span size='large'>十</span>"
+                
+         },
+         "current-only": false
+     },
+
+"niri/window": {
+	"format": "{app_id}"	
+},
+  "clock": {
+    "interval": 1,
+    "format": " {:%A %B %d %Y,  %I:%M:%S %p}",
+    "tooltip": false,
+    "on-click": "gsimplecal"
+  },
+  "custom/gammastep": {
+    "format": "󰖚 3000K",
+    "on-click": "kitty -e gammastep -O 3000"
+  },
+  "pulseaudio": {
+    "format": "{icon}{volume}% {format_source}",
+    "format-muted": "x0% {format_source}",
+    "on-click": "pavucontrol-qt",
+    "format-source": "{volume}%",
+        "format-source-muted": " 0%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [""]
+        },
+        // "on-click": "playerctl play-pause",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+
+  "backlight": {
+    "device": "amdgpu_bl0",
+    "format": "{percent}%"
+  },
+
+  "network": {
+    "interval": 1,
+    "format-wifi": " {bandwidthDownBytes}",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "",
+    "on-click": "wpa-cute",
+    "tooltip-format-wifi": "{essid}",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-disconnected": "Disconnected"
+  },
+
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": " 100%",
+    "interval": 10
+  },
+
+  "custom/power": {
+    "format": " ",
+    "on-click": "~/Scripts/fuzzel-pwrmenu",
+    "tooltip": false
+  }
+}
