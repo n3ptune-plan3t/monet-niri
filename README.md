@@ -46,5 +46,7 @@ sorry, if i missed someone here.
 ### check all keybindings from niri config.kdl
 Mod+A => Wallpaper + matugen setter (need waypaper, swww, swaybg)
 
+### Papirus icon theme and papirus folder change script must be installed in .local/share/icons
+
 【﻿ｒｅｍｅｍｂｅｒ】 to logout and login each time you change wallpaper to make things work correctly
 
