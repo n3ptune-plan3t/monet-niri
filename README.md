@@ -22,10 +22,14 @@ niri with matugen themed gtk and qt apps
 
 <details>
 <summary>🇹​​🇭​​🇮​​🇳​​🇬​​🇸​ ​🇺​​🇸​​🇪​​🇩​ ​🇫​​🇷​​🇴​​🇲​ ​🇴​​🇹​​🇭​​🇪​​🇷​​🇸​</summary>
-[Papirus Folder Colors Script copied from elrondforwin and modified](https://github.com/elrondforwin/hyprdots)  
-[Kvantum Theme is based on vinceliuice Orchis‑kvantum](https://github.com/vinceliuice/Orchis-kde)  
-[Gtk theme is adw‑gtk3](https://github.com/lassekongo83/adw-gtk3)  
-[matugen for color‑palette](https://github.com/InioX/matugen)  
+[Papirus Folder Colors Script copied from elrondforwin and modified](https://github.com/elrondforwin/hyprdots)
+  
+[Kvantum Theme is based on vinceliuice Orchis‑kvantum](https://github.com/vinceliuice/Orchis-kde)
+
+[Gtk theme is adw‑gtk3](https://github.com/lassekongo83/adw-gtk3)
+
+[matugen for color‑palette](https://github.com/InioX/matugen)
+
 [wallpapers are from Pexels](https://pexels.com)
 
 sorry, if i missed someone here.
@@ -40,5 +44,6 @@ sorry, if i missed someone here.
 
 ### check all keybindings from niri config.kdl
 Mod+A => Wallpaper + matugen setter (need waypaper, swww, swaybg)
+
 【﻿ｒｅｍｅｍｂｅｒ】 to logout and login each time you change wallpaper to make things work correctly
 
