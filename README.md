@@ -16,6 +16,8 @@ niri with matugen themed gtk and qt apps
 ![Screenshot](Pictures/Screenshots/ytmpv-script.png)
 ![Screenshot](Pictures/Screenshots/zathura.png)
 ![Screenshot](Pictures/Screenshots/mako.png)
+![Screenshot](Pictures/Screenshots/MoreSS.png)
+![Screenshot](Pictures/Screenshots/MoreSS2.png)
 </details>
 
 👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽
