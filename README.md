@@ -22,8 +22,9 @@ niri with matugen themed gtk and qt apps
 
 <details>
 <summary>🇹​​🇭​​🇮​​🇳​​🇬​​🇸​ ​🇺​​🇸​​🇪​​🇩​ ​🇫​​🇷​​🇴​​🇲​ ​🇴​​🇹​​🇭​​🇪​​🇷​​🇸​</summary>
-[Papirus Folder Colors Script copied from elrondforwin and modified](https://github.com/elrondforwin/hyprdots)
   
+[Papirus Folder Colors Script copied from elrondforwin and modified](https://github.com/elrondforwin/hyprdots)
+
 [Kvantum Theme is based on vinceliuice Orchis‑kvantum](https://github.com/vinceliuice/Orchis-kde)
 
 [Gtk theme is adw‑gtk3](https://github.com/lassekongo83/adw-gtk3)
