@@ -52,3 +52,7 @@ Mod+A => Wallpaper + matugen setter (need waypaper, swww, swaybg)
 
 【﻿ｒｅｍｅｍｂｅｒ】 to logout and login each time you change wallpaper to make things work correctly
 
+
+
+in fuzzel-ytmpv script you can either paste the clean link or search for video(top 30 according to view will be displayed)
+
