@@ -2,7 +2,7 @@
 niri with matugen themed gtk and qt apps
 
 <details>
-<summary>𝕔𝕝𝕚𝕔𝕜 𝕥𝕠 𝕧𝕚𝕖𝕨 𝕤𝕔𝕣𝕖𝕖𝕟𝕤𝕙𝕠𝕥𝕤</summary>
+<summary>░▒▓█ 𝐬Č𝕣𝑒𝐄𝕟ｓĤ𝓞𝕥Ş █▓▒░</summary>
 
 ![Screenshot](Pictures/Screenshots/desktop.png)
 ![Screenshot](Pictures/Screenshots/overview.png)
@@ -18,13 +18,16 @@ niri with matugen themed gtk and qt apps
 ![Screenshot](Pictures/Screenshots/mako.png)
 </details>
 
+👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽
+
 <details>
-<summary>Things Used from others</summary>
-[Papirus Folder Colors Script copied from elrondforwin and modified](https://github.com/elrondforwin/hyprdots)
-[Kvantum Theme is based on vinceliuice Orchis-kvantum](https://github.com/vinceliuice/Orchis-kde)
-[Gtk theme is adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
-[matugen for color-pallete](https://github.com/InioX/matugen)
-[wallpapers are from pexels](htttps://pexels.com)
+<summary>🇹​​🇭​​🇮​​🇳​​🇬​​🇸​ ​🇺​​🇸​​🇪​​🇩​ ​🇫​​🇷​​🇴​​🇲​ ​🇴​​🇹​​🇭​​🇪​​🇷​​🇸​</summary>
+[Papirus Folder Colors Script copied from elrondforwin and modified](https://github.com/elrondforwin/hyprdots)  
+[Kvantum Theme is based on vinceliuice Orchis‑kvantum](https://github.com/vinceliuice/Orchis-kde)  
+[Gtk theme is adw‑gtk3](https://github.com/lassekongo83/adw-gtk3)  
+[matugen for color‑palette](https://github.com/InioX/matugen)  
+[wallpapers are from Pexels](https://pexels.com)
+
 sorry, if i missed someone here.
 </details>
 
@@ -37,4 +40,5 @@ sorry, if i missed someone here.
 
 ### check all keybindings from niri config.kdl
 Mod+A => Wallpaper + matugen setter (need waypaper, swww, swaybg)
+【﻿ｒｅｍｅｍｂｅｒ】 to logout and login each time you change wallpaper to make things work correctly
 
